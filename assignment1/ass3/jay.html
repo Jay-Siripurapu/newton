@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    html,body{
+      background-image: linear-gradient(to right, black,white,black);
+      height: 100%;
+      width: 100%;
+    }
+    .content{
+      height: 55%;
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+    left: 16%;
+    align-content: center;
+    top:21%;
+    background-color: #282828;
+    }
+    .h11{
+      position: relative;
+      left:35%;
+      top:20%;
+      color:azure;
+    }
+    .button1{
+      position: relative;
+      left:45%;
+      top:45%;
+    }
+    .par{
+      position: relative;
+      font-size: 250%;
+      color:red;
+      left: 35%;
+      top:25%;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+  <h1 class="h11">program for palindrome</h1>
+    <button class="button1" onclick="pal()">Palindrome</button>
+    <p class="par" id="disp"></p>
+</div>
+
+<!--
+  script for js -->
+  <script>
+      var ans,str
+      function palindrome() {
+      str=prompt("ENTER A VALUE TO CHECK FOR AN PALINDROME")
+      var len = str.length;
+      var mid = Math.floor(len/2);
+      for ( var i=0;i<mid;i++ )
+      {
+        if ( str[i] !== str[len-(i+1)])
+            {
+            return false;
+            }
+      }
+      return true;
+
+    }
+    function pal(){
+      if(palindrome())
+      document.getElementById("disp").innerHTML= "It is an palindrome";
+      else
+      document.getElementById("disp").innerHTML= "It is not an palindrome";
+    }
+      </script>
+</body>
+</html>

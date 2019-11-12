@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    body{
+      background-image: linear-gradient(to right,skyblue,white,skyblue);height: 100%;width:100%;
+    }
+    .content{
+      position: relative;
+      left: 35%;
+      right:35%;
+      top:50%;
+    }
+    .inner:hover{
+      width: 250px;
+  border-color: BLUE;
+    }
+  .inner{
+
+    border: 0;
+  background: none;
+  position: relative;
+  left:5%;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 50px;
+  width: 200px;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+  }
+  .l{
+    background-image: linear-gradient(to right,skyblue,white,skyblue);
+    width:30%;
+    padding: .2% .2%;
+    border:2px solid black;
+    margin-top: 1%;
+
+  }
+  .butt{
+    border-radius: 30%;
+    width:60px;
+    position: relative;
+    left: 5%;
+    background-color: #3498db;
+  }
+  </style>
+</head>
+<body>
+   <div class="content">
+      <h1 style="position: relative;left:8.5%">TO-DO LIST</h1>
+      <input class="inner" id="input"type="text">
+      <button class="butt" onclick="add()">Add</button>
+      <div class="l">
+      <ul id="list"></ul>
+  </div>
+   </div>
+
+
+	<script type="text/javascript">
+		function add(){
+			var list = document.getElementById('list');
+			var text = document.createElement('li');
+			var tb = document.getElementById('input');
+			text.innerText = tb.value;
+			list.appendChild(text);
+			tb.value = "";
+      tb.focus();
+
+		}
+	</script>
+</body>
+</html>
